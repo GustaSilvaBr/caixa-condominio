@@ -1,14 +1,18 @@
-import {Outlet} from 'react-router-dom';
+import {Outlet, Link} from 'react-router-dom';
 export function Root(){
     return (
         <div id="navigation-bar">
             <nav>
                 <ul>
                     <li>
-                        <a href="/flow">Flow</a>
+                        <Link to={"/flow"}>
+                            Flow
+                        </Link>
                     </li>
                     <li>
-                        <a href="/apartments">apartments</a>
+                        <Link to={"/apartments"}>
+                            Apartments
+                        </Link>
                     </li>
                 </ul>
             </nav>

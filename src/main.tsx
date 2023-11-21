@@ -22,12 +22,12 @@ const router = createBrowserRouter([
       {
         path: "apartments",
         element: <Apartment />
+      },
+      {
+        path:"flow",
+        element: <CashFlow/>
       }
     ]
-  },
-  {
-    path: "flow",
-    element: <CashFlow />
   },
 ]);
 
