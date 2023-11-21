@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import {ErrorPage} from './error-page';
+import { ErrorPage } from './error-page';
 
-import {Root} from './routes/root';
-import {Apartment} from './pages/apartments/index'
-import {CashFlow} from './pages/cashFlow/index';
+import { Root } from './routes/root';
+import { Apartment } from './pages/apartments/index'
+import { CashFlow } from './pages/cashFlow/index';
 
 
 import {
@@ -15,22 +15,24 @@ import {
 
 const router = createBrowserRouter([
   {
-    path:"/",
-    element:<Root/>,
-    errorElement:<ErrorPage/>,
+    path: "/",
+    element: <Root />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "apartments",
+        element: <Apartment />
+      }
+    ]
   },
   {
-    path:"apartments",
-    element:<Apartment/>
-  },
-  {
-    path:"flow",
-    element:<CashFlow/>
+    path: "flow",
+    element: <CashFlow />
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )

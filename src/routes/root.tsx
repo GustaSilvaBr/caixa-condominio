@@ -1,3 +1,4 @@
+import {Outlet} from 'react-router-dom';
 export function Root(){
     return (
         <div id="navigation-bar">
@@ -11,6 +12,7 @@ export function Root(){
                     </li>
                 </ul>
             </nav>
+            <Outlet/>
         </div>
     )
 }
