@@ -1,5 +1,16 @@
-import {Outlet, Link} from 'react-router-dom';
+import {Outlet, Link, useLoaderData} from 'react-router-dom';
+import {getJokes} from '../services/jokes';
+
+export async function loader(){
+    const jokes = await getJokes();
+    return {jokes};
+}
+
 export function Root(){
+    const jokes = useLoaderData();
+
+    console.log(jokes);
+
     return (
         <div id="navigation-bar">
             <nav>
