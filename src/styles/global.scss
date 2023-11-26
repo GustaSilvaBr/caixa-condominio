@@ -1,0 +1,39 @@
+*{
+    box-sizing:border-box;
+}
+
+:root{
+    --background-gray:#EFEFEF;
+    --background-white:#fff;
+    --black-text:#20222B;
+    --black-action:#22242D;
+    --gray-text:#767782;
+
+
+    --revenue-color:#1F86AB;
+    --expensive-color:#3B3DBF;
+
+    --default-font:'Roboto', sans-serif;
+}
+
+body{
+    background-color:var(--background-gray);
+    font-family: var(--default-font);
+
+    height: 100vh;
+}
+
+body, div, h1, h2, h3, h4, h5, h6{
+    margin:0;
+    padding:0;
+}
+
+div.page-container{
+    padding:24px;
+
+    height:100vh;
+    h1{
+        font-size:18px;
+        font-weight: normal;
+    }
+}
