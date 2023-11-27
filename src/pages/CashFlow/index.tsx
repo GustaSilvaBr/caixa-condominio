@@ -3,6 +3,11 @@ import './styles.scss'
 import expenseArrow from '../../assets/expenseArrow.svg';
 import revenueArrow from '../../assets/revenueArrow.svg';
 import savings from '../../assets/savings.svg';
+import plus from '../../assets/plus.svg';
+import edit from '../../assets/edit.svg';
+import deleteIcon from '../../assets/delete.svg';
+
+
 
 export function CashFlow() {
     return (
@@ -58,15 +63,15 @@ export function CashFlow() {
             </div>
 
             <div className="flow-history">
-                <div>
+                <div className="flow-research">
                     <input placeholder="Ex: paola silva ou 30,00.." type="text" />
                     <button className="plus-btn">
-                        Add
+                        <img src={plus} alt="add flow" />
                     </button>
                 </div>
                 <div className="flow-list">
                     <div className="flow-item">
-                        <img src="" alt="flow-icon" />
+                        <img src={revenueArrow} alt="flow-icon" />
                         <div className="flow-info">
                             <div>
                                 <span className="flow-item-title">
@@ -84,19 +89,19 @@ export function CashFlow() {
                         </div>
                         <div className="flow-item-actions">
                             <button>
-                                Edit
+                                <img src={edit} alt="update flow" />
                             </button>
                             <button>
-                                Del
+                                <img src={deleteIcon} alt="update flow" />
                             </button>
                         </div>
                     </div>
                     <div className="flow-item">
-                        <img src="" alt="flow-icon" />
+                        <img src={revenueArrow} alt="flow-icon" />
                         <div className="flow-info">
                             <div>
                                 <span className="flow-item-title">
-                                    Paola Silva
+                                    William Santos
                                 </span>
                                 <span className="flow-item-value">
                                     R$ 30, 00
@@ -110,13 +115,40 @@ export function CashFlow() {
                         </div>
                         <div className="flow-item-actions">
                             <button>
-                                Edit
+                                <img src={edit} alt="update flow" />
                             </button>
                             <button>
-                                Del
+                                <img src={deleteIcon} alt="update flow" />
                             </button>
                         </div>
                     </div>
+                    <div className="flow-item">
+                        <img src={revenueArrow} alt="flow-icon" />
+                        <div className="flow-info">
+                            <div>
+                                <span className="flow-item-title">
+                                    William Santos
+                                </span>
+                                <span className="flow-item-value">
+                                    R$ 30, 00
+                                </span>
+                            </div>
+                            <div>
+                                <span className="flow-item-date">
+                                    01/01/2022
+                                </span>
+                            </div>
+                        </div>
+                        <div className="flow-item-actions">
+                            <button>
+                                <img src={edit} alt="update flow" />
+                            </button>
+                            <button>
+                                <img src={deleteIcon} alt="update flow" />
+                            </button>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
