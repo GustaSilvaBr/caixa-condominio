@@ -1,22 +1,39 @@
 div.payments-page{
-    display: grid;
-
-    grid-row:48px;
-
-    grid-template-rows: 0.1fr 0.2fr 70px 1fr;
+    
 }
 
 div.select-year{
     display: flex;
     justify-content:space-between;
     align-items:center;
+
+    height: 30px;
+    div.filter-date{
+        display:flex;
+        column-gap:12px;
+
+        select{
+            border-radius:2.5px;
+            border:none;
+            font-size:12px;
+            height:24px;
+            width:78px;
+            padding:0 5px;
+            border-right: 5px solid transparent;
+        }
+    }
 }
 
 div.total-of-flows{
+   margin:34px 0;
+
 
     display:grid;
     grid-template-columns:1fr 1fr;
+    
     column-gap:18px;
+    row-gap:18px;
+    height: 158px;
     // justify-content:space-between;
 
     div{
@@ -51,4 +68,9 @@ div.total-of-flows{
         
     }
     
+}
+
+div.flow-history{
+    background-color: red;
+    height:100%;
 }

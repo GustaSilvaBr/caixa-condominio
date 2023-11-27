@@ -2,39 +2,51 @@ import './styles.scss'
 
 import expenseArrow from '../../assets/expenseArrow.svg';
 import revenueArrow from '../../assets/revenueArrow.svg';
+import savings from '../../assets/savings.svg';
 
 export function CashFlow() {
     return (
         <div className="page-container payments-page">
             <div className="select-year">
                 <h1>Fluxo de caixa</h1>
-                <select>
-                    <option>
-                        2023
-                    </option>
-                    <option>
-                        2024
-                    </option>
-                </select>
-            </div>
 
-            <div className="cash-per-month">
-                <div className="select-month">
-                    <button>left</button>
-                    <span>Julho</span>
-                    <button>right</button>
+                <div className="filter-date">
+                    <select>
+                        <option>
+                            Junho
+                        </option>
+                        <option selected>
+                            Julho
+                        </option>
+                        <option>
+                            Agosto
+                        </option>
+                    </select>
+                    <select>
+                        <option>
+                            2023
+                        </option>
+                        <option>
+                            2024
+                        </option>
+                    </select>
                 </div>
-                <span>R$ 3.000</span>
             </div>
 
             <div className="total-of-flows">
+                <div>
+                    <img src={savings} alt="revenue arrow" />
+                    <div className="total-flow-info">
+                        <span className="total-flow-kind">Em caixa</span>
+                        <span className="total-flow-value"> R$ 3000</span>
+                    </div>
+                </div>
                 <div>
                     <img src={revenueArrow} alt="revenue arrow" />
                     <div className="total-flow-info">
                         <span className="total-flow-kind">Receitas</span>
                         <span className="total-flow-value"> R$ 900</span>
                     </div>
-
                 </div>
                 <div >
                     <img src={expenseArrow} alt="expense arrow" />
