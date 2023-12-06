@@ -1,0 +1,39 @@
+div.cash-flow-reports {
+    margin: 34px 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 18px;
+    row-gap: 18px;
+    height: 158px;
+}
+
+div.cash-flow-report-item {
+    background-color: var(--background-white);
+    border-radius: 5px;
+
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    align-items: center;
+    justify-items: center;
+
+    div.flow-report-value-info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        justify-content: space-evenly;
+        align-items: start;
+
+        span.flow-report-title {
+            color: var(--gray-text);
+            font-size: 12px;
+        }
+
+        span.flow-report-value {
+            color: var(--black-text);
+            font-size: 18px;
+        }
+    }
+}

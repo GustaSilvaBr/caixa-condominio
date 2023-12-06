@@ -7,6 +7,7 @@ import plus from '../../assets/plus.svg';
 import edit from '../../assets/edit.svg';
 import deleteIcon from '../../assets/delete.svg';
 
+import { CashFlowReports } from './CashFlowReports/Index';
 
 
 export function CashFlow() {
@@ -38,29 +39,7 @@ export function CashFlow() {
                 </div>
             </div>
 
-            <div className="total-of-flows">
-                <div>
-                    <img src={savings} alt="revenue arrow" />
-                    <div className="total-flow-info">
-                        <span className="total-flow-kind">Em caixa</span>
-                        <span className="total-flow-value"> R$ 3000</span>
-                    </div>
-                </div>
-                <div>
-                    <img src={revenueArrow} alt="revenue arrow" />
-                    <div className="total-flow-info">
-                        <span className="total-flow-kind">Receitas</span>
-                        <span className="total-flow-value"> R$ 900</span>
-                    </div>
-                </div>
-                <div >
-                    <img src={expenseArrow} alt="expense arrow" />
-                    <div className="total-flow-info">
-                        <span className="total-flow-kind">Despesas</span>
-                        <span className="total-flow-value"> R$ 400</span>
-                    </div>
-                </div>
-            </div>
+            <CashFlowReports />
 
             <div className="flow-history">
                 <div className="flow-research">
@@ -148,7 +127,7 @@ export function CashFlow() {
                             </button>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
