@@ -1,42 +1,36 @@
+import  {useState} from 'react';
+
 import './styles.scss'
 
-import expenseArrow from '../../assets/expenseArrow.svg';
 import revenueArrow from '../../assets/revenueArrow.svg';
-import savings from '../../assets/savings.svg';
 import plus from '../../assets/plus.svg';
 import edit from '../../assets/edit.svg';
 import deleteIcon from '../../assets/delete.svg';
 
 import { CashFlowReports } from './CashFlowReports/Index';
 
+import {SelectPeriod} from './SelectPeriod/index';
+
+import utils from '../../utils.ts';
 
 export function CashFlow() {
+
+
+    const [startedPeriod, setStartedPeriod] = useState<Date>(utils.getFirstDateDay(new Date()));
+    const [endedPeriod, setEndedPeriod] = useState<Date>(utils.getLastDayOfMonth(new Date()));
+
     return (
         <div className="page-container payments-page">
             <div className="select-year">
                 <h1>Fluxo de caixa</h1>
 
-                <div className="filter-date">
-                    <select>
-                        <option>
-                            Junho
-                        </option>
-                        <option selected>
-                            Julho
-                        </option>
-                        <option>
-                            Agosto
-                        </option>
-                    </select>
-                    <select>
-                        <option>
-                            2023
-                        </option>
-                        <option>
-                            2024
-                        </option>
-                    </select>
-                </div>
+                <SelectPeriod 
+                    startedPeriod={startedPeriod}
+                    setStartedPeriod={setStartedPeriod}
+
+                    endedPeriod={endedPeriod}
+                    setEndedPeriod={setEndedPeriod}
+                />
             </div>
 
             <CashFlowReports />

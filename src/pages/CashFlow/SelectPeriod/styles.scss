@@ -1,0 +1,20 @@
+div.select-period{
+    display:flex;
+    justify-content:space-between;
+    
+    column-gap:16px;
+    div.period-group{
+        display: flex;
+        align-items:center;
+
+        column-gap:6px;
+        label{
+            font-size:16px;
+        }
+
+        input{
+            border:none;
+            padding:3px 6px;
+        }
+    }
+}

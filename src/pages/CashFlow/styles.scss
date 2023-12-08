@@ -1,27 +1,10 @@
-div.payments-page {
-}
-
 div.select-year {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
 
-    height: 30px;
-
-    div.filter-date {
-        display: flex;
-        column-gap: 12px;
-
-        select {
-            border-radius: 2.5px;
-            border: none;
-            font-size: 12px;
-            height: 24px;
-            width: 78px;
-            padding: 0 5px;
-            border-right: 5px solid transparent;
-        }
-    }
+    flex-direction: column;
+    row-gap: 12px;
 }
 
 div.total-of-flows {
